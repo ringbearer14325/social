@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 
 
-default export Login extends Component {
+export default class Login extends Component {
 
 
 
