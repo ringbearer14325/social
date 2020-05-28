@@ -13,7 +13,7 @@ export default class Login extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.githubSignIn = this.githubSignIn.bind(this);
+    this.GitHubSignIn = this.GitHubSignIn.bind(this);
     this.googleSignIn= this.googleSignIn.bind(this);
   }
 
