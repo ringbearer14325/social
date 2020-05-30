@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from 'src/pages/header.js'
 import { auth } from "../services/firebase";
-// import db api here
+import { db } from "../services/firebase"
 
 
 export default class Chat extends Component {
@@ -33,6 +33,12 @@ export default class Chat extends Component {
         } 
     }
 
+    handleChange(event) {
+        this.setState({
+          content: event.target.value
+        });
+      }
+
     
     render() {
         return (
@@ -42,6 +48,11 @@ export default class Chat extends Component {
                         return <p key={chat.timestamp}>{chat.content}</p>
                     })}
                 </div>
+                <form onSubmit={this.handleSubmit}>
+                    <input onChange={this.handleChange} value={this.state.content}></input>
+                    {this.state.error ? <p>{this.state.writeError}</p> : null}
+                    <button type="submit">send</button>
+                </form>
                 <div>
                     Login in as: <strong>{this.state.user.email}</strong>
                 </div>

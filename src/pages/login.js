@@ -13,7 +13,7 @@ export default class Login extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.GitHubSignIn = this.GitHubSignIn.bind(this);
+    this.githubSignIn = this.githubSignIn.bind(this);
     this.googleSignIn= this.googleSignIn.bind(this);
   }
 
@@ -41,6 +41,14 @@ export default class Login extends Component {
       } catch (error) {
           this.setState({ error: error.message });
       }
+  }
+
+  async githubSignIn() {
+    try {
+      await signInWithGitHub();
+    } catch (error) {
+      this.setState({ error: error.message });
+    }
   }
   
 
@@ -92,6 +100,9 @@ export default class Login extends Component {
           <p>Or</p>
           <button onClick={this.googleSignIn} type="button">
               Sign in with google
+          </button>
+          <button type="button" onClick={this.githubSignIn}>
+            Sign up with Github
           </button>
         </form>
       </div>

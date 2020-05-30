@@ -14,7 +14,7 @@ export default class signup extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.githubSignIn = this.githubSignIn.bind(this);
+        this.GitHubSignIn = this.GitHubSignIn.bind(this);
       }
 
       handleChange(event) {
