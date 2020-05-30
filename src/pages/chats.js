@@ -15,6 +15,9 @@ export default class Chat extends Component {
             writeError: null
     };
 
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+
 }
     
   async componentDidMount() {
@@ -39,6 +42,20 @@ export default class Chat extends Component {
         });
       }
 
+    async handleSubmit(event) {
+        event.preventDefault();
+        this.setState({ writeError: null });
+        try {
+            await db.ref("chats").push({
+                content: this.state.content,
+                timestamp: Date.now(),
+                uid: this.state.user.uid
+            });
+            this.setState({ content: '' });
+        } catch (error) {
+            this.setState({ writeError: error.message });
+        }
+    }
     
     render() {
         return (
