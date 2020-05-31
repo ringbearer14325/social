@@ -9,9 +9,5 @@
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
-  },
-    "require": {
-      "cloudinary/cloudinary_php": "dev-master"
-    }
-  
+  }
 }
