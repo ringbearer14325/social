@@ -8,6 +8,7 @@
     "csanquer/pdo-service-provider": "~1.1dev"
   },
   "require-dev": {
-    "heroku/heroku-buildpack-php": "*"
+    "heroku/heroku-buildpack-php": "*",
+    "cloudinary/cloudinary_php": "dev-master"
   }
 }
