@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0524100e502cdddbe51e38063b60b4e0",
+    "content-hash": "3756c9c93e1e772a9b223cb4400e4ca4",
     "packages": [
         {
             "name": "alrik11es/cowsayphp",
@@ -1811,6 +1811,59 @@
     ],
     "packages-dev": [
         {
+            "name": "cloudinary/cloudinary_php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudinary/cloudinary_php.git",
+                "reference": "fc338fa5aa460e8d69509dea02930af35b475bb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/fc338fa5aa460e8d69509dea02930af35b475bb5",
+                "reference": "fc338fa5aa460e8d69509dea02930af35b475bb5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "ext-zip": "*",
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ],
+                "files": [
+                    "src/Helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cloudinary",
+                    "homepage": "https://github.com/cloudinary/cloudinary_php/graphs/contributors"
+                }
+            ],
+            "description": "Cloudinary PHP SDK",
+            "homepage": "https://github.com/cloudinary/cloudinary_php",
+            "keywords": [
+                "cdn",
+                "cloud",
+                "cloudinary",
+                "image management",
+                "sdk"
+            ],
+            "time": "2020-06-08T17:15:36+00:00"
+        },
+        {
             "name": "heroku/heroku-buildpack-php",
             "version": "v176",
             "source": {
@@ -1858,7 +1911,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "csanquer/pdo-service-provider": 20
+        "csanquer/pdo-service-provider": 20,
+        "cloudinary/cloudinary_php": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
